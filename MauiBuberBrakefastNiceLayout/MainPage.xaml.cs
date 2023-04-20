@@ -1,8 +1,9 @@
-﻿namespace MauiBuberBrakefastNiceLayout;
+﻿using MauiBuberBrakefastNiceLayout.ViewModels;
+
+namespace MauiBuberBrakefastNiceLayout;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{

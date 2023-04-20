@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiBuberBrakefastNiceLayout;
+namespace MauiBuberBrakefastNiceLayout.ViewModels;
 
 public partial class MyBreakfastViewModel : ObservableObject
 {
@@ -29,7 +29,7 @@ public partial class MyBreakfastViewModel : ObservableObject
                 EndDateTime:DateTime.UtcNow.AddDays(1).AddHours(2),
                 ImageUrl: new Uri("https://images/unsplash.com/photo1633204339708-86"),
                 Savory: new List<string>{ "Oatmeal","Avocado Toast","Omelet","Salac"},
-                Sweet: new List<string>{"Cookie"}
+                Sweet: new List<string>{"Cookie"})
 
         };
     }
