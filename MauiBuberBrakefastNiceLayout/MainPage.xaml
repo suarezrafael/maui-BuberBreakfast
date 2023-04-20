@@ -16,14 +16,14 @@
         <!--Your Breakfast-->
         <HorizontalStackLayout>
             <Label FontFamily="RobotoBold" FontSize="24" 
-                   Text="Your "/>
+                   Text="Seu "/>
             <Label FontFamily="RobotoBold" FontSize="24" 
-                   Text="Breakfast"
+                   Text="Café da manhã"
                    TextColor="{StaticResource BuberBlue}"/>
         </HorizontalStackLayout>
 
         <!--Breakfast you have created-->
-        <Label Text="Breakfast you have created" 
+        <Label Text="Café da manhã que você criou" 
                Grid.Row="1" 
                TextColor="#555"/>
 
@@ -48,7 +48,8 @@
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding ImageUrl}" Aspect="AspectFill"/>
-                                <Grid Grid.Column="1" Padding="14">
+
+                                <Grid Grid.Column="1" Padding="11">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="AUTO"/>
                                         <RowDefinition Height="AUTO"/>
@@ -82,16 +83,19 @@
                                        TextColor="#555"/>
 
                                     <!--Savory-->
-                                    <FlexLayout BindableLayout.ItemsSource="{Binding Savory}"
+                                    <FlexLayout Wrap="NoWrap"
+                                                BindableLayout.ItemsSource="{Binding Savory}"
                                             Grid.Row="3"
-                                            Wrap="Wrap"
-                                            AlignItems="Start">
+                                            
+                                            AlignItems="Start"
+                                                JustifyContent="SpaceAround">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
-                                                <Frame Padding="5"
-                                                   Margin="1"
+                                                <Frame Padding="1,2,1,2"
+                                                   Margin="2"
                                                    BorderColor="Transparent"
-                                                   BackgroundColor="#ecf7ff">
+                                                   BackgroundColor="#ecf7ff"
+                                                       >
                                                     <Label Text="{Binding .}"/>
                                                 </Frame>
                                             </DataTemplate>
@@ -100,8 +104,10 @@
                                     <!--Sweet-->
                                     <FlexLayout BindableLayout.ItemsSource="{Binding Sweet}"
                                             Grid.Row="4"
-                                            Wrap="Wrap"
-                                            AlignItems="Start">
+                                               
+                                            Wrap="NoWrap"
+                                            AlignItems="Start"
+                                               >
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
                                                 <Frame Padding="5"
@@ -121,7 +127,7 @@
             </CollectionView>
         </RefreshView>
         <!--Create New Breakfast button-->
-        <Button Text="Create New Breakfast" 
+        <Button Text="+ Novo Café da manhã" 
                 Grid.Row="3"
                 TextColor="White"
                 BackgroundColor="Black"

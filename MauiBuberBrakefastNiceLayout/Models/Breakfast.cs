@@ -5,6 +5,6 @@ public record Breakfast(
     string Description,
     DateTime StartDateTime,    
     DateTime EndDateTime,
-    Uri ImageUrl,
+    string ImageUrl,
     List<string> Savory,
     List<string> Sweet);

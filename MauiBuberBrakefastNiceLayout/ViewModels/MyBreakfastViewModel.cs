@@ -33,21 +33,21 @@ public partial class MyBreakfastViewModel : ObservableObject
             Breakfasts = new()
         {
             new Breakfast(
-                Name:"Vegan Sunshine",
-                Description:"Vegan everything!",
+                Name:"Luz do sol Vegano",
+                Description:"Todos ingredientes veganos! Junte-se a nós para um café da manhã saudável cheio de pratos veganos e biscoitos",
                 StartDateTime:DateTime.UtcNow.AddDays(1),
                 EndDateTime:DateTime.UtcNow.AddDays(1).AddHours(2),
-                ImageUrl: new Uri("https://images.unsplash.com/photo1633204339708-86"),
-                Savory: new List<string>{ "Oatmeal","Avocado Toast","Omelet","Salac"},
+                ImageUrl: "cafe1.jpg",
+                Savory: new List<string>{ "Aveia", "Bery","Omelete"},
                 Sweet: new List<string>{"Cookie"}),
             new Breakfast(
-                Name:"Vegan Sunshine",
-                Description:"Vegan everything!",
+                Name:"Café da manhã @Suarez's",
+                Description:"Oi, eu sou o Rafael. Eu serei seu chef no domingo!",
                 StartDateTime:DateTime.UtcNow.AddDays(1),
                 EndDateTime:DateTime.UtcNow.AddDays(1).AddHours(2),
-                ImageUrl: new Uri("https://images.unsplash.com/photo1633204339708-86"),
-                Savory: new List<string>{ "Oatmeal","Avocado Toast","Omelet","Salac"},
-                Sweet: new List<string>{"Cookie"})
+                ImageUrl: "cafe2.jpg",
+                Savory: new List<string>{ "Sanduiche","Salada"},
+                Sweet: new List<string>{"Paqueca","Waffle"})
 
         };
         }
