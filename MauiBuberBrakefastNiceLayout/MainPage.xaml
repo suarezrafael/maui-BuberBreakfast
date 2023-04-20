@@ -4,7 +4,8 @@
              xmlns:viewmodels="clr-namespace:MauiBuberBrakefastNiceLayout.ViewModels"
              xmlns:models="clr-namespace:MauiBuberBrakefastNiceLayout.Models"
              x:DataType="viewmodels:MyBreakfastViewModel"
-             x:Class="MauiBuberBrakefastNiceLayout.MainPage">
+             x:Class="MauiBuberBrakefastNiceLayout.MainPage"
+             Shell.NavBarIsVisible="False">
     <Grid Padding="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO"/>
