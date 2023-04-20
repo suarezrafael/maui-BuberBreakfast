@@ -29,18 +29,18 @@
 
         <!--Scrollable list of Breakfasts-->
         <RefreshView Grid.Row="2"
-                        Margin="0,16"
+                        Margin="0,11"
                      IsRefreshing="{Binding IsRefreshing}"
                      Command="{Binding LoadBreakfastsCommand}">
             <CollectionView ItemsSource="{Binding Breakfasts}"
                         >
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="20"/>
+                                   ItemSpacing="2"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Breakfast">
-                        <Border MinimumHeightRequest="315"
+                        <Border MinimumHeightRequest="312"
                             Stroke="#efefef">
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -48,7 +48,7 @@
                                     <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding ImageUrl}" Aspect="AspectFill"/>
-                                <Grid Grid.Column="1" Padding="16">
+                                <Grid Grid.Column="1" Padding="14">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="AUTO"/>
                                         <RowDefinition Height="AUTO"/>
@@ -59,20 +59,26 @@
 
                                     <!--Name-->
                                     <Label Text="{Binding Name}"
-                                       FontSize="24"
+                                       FontSize="22"
                                        FontFamily="RobotoBold"/>
 
                                     <!--Start anda End Date Time-->
-                                    <Label Text="Tomorrow, 8:00 - 11:00 AM"
-                                       FontSize="16"
-                                       Grid.Row="1"
-                                       />
+                                    <FlexLayout Wrap="Wrap"
+                                                Grid.Row="1"
+                                                AlignItems="Start">
+                                        <Label Text="{Binding StartDateTime,Converter={StaticResource DateTimeToBreakfastDayConverter}}"/>
+                                        <Label Text=","/>
+                                        <Label Text="{Binding StartDateTime,Converter={StaticResource DateTimeToTimeConverter}}"/>
+                                        <Label Text=" - "/>
+                                        <Label Text="{Binding EndDateTime,Converter={StaticResource DateTimeToTimeConverter}}"/>
+
+                                    </FlexLayout>
 
                                     <!--Description-->
                                     <Label Text="{Binding Description}"
                                        FontSize="16"
                                        Grid.Row="2"
-                                       Padding="0,8,0,0"
+                                       Padding="0,6,0,0"
                                        TextColor="#555"/>
 
                                     <!--Savory-->
@@ -82,7 +88,7 @@
                                             AlignItems="Start">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
-                                                <Frame Padding="6"
+                                                <Frame Padding="5"
                                                    Margin="1"
                                                    BorderColor="Transparent"
                                                    BackgroundColor="#ecf7ff">
@@ -98,7 +104,7 @@
                                             AlignItems="Start">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
-                                                <Frame Padding="6"
+                                                <Frame Padding="5"
                                                    Margin="1"
                                                    BorderColor="Transparent"
                                                    BackgroundColor="#f6ddff">
@@ -119,7 +125,7 @@
                 Grid.Row="3"
                 TextColor="White"
                 BackgroundColor="Black"
-                Padding="15"
+                Padding="12"
                 CornerRadius="2"/>
     </Grid>
 </ContentPage>
